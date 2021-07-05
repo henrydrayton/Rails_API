@@ -48,6 +48,51 @@ DELETE http://localhost:3000/api/jokes/1
 
 GET http://localhost:3000/api/jokes/random?category=great
 
+### Create User 
+
+POST http://localhost:3000/api/auth/sign_up 
+Content-Type: application/json
+
+{
+    "username": "Henry3",
+    "email": "henry3@test.com",
+    "password": "password3",
+    "password_confirmation": "password2"
+}
+
+
+### Sign in with correct details 
+
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+    
+    "email": "henry3@test.com",
+    "password": "password3"
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
