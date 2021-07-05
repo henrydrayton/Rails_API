@@ -6,6 +6,7 @@ GET http://localhost:3000/api/jokes
 
 POST http://localhost:3000/api/jokes
 Content-Type: application/json
+Authorization: Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjU1NTg4NjUsInN1YiI6M30.532LzWGVAd9kY26atyIztvMBpe8-A7Y6yXSY027Ca2A
 
 {
     "category_id": 1,
@@ -33,6 +34,7 @@ GET http://localhost:3000/api/jokes/1000
 
 PUT http://localhost:3000/api/jokes/1
 Content-Type: application/json
+Authorization: Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjU1NTk4NTIsInN1YiI6MX0.eW3qHqsNP3XdNZI0Xn11Y3-4kJfaSdFT4oyjAlzSgGE
 
 {
     "body": "A programming joke",
@@ -42,6 +44,13 @@ Content-Type: application/json
 ### Succesfully delete joke with id 1
 
 DELETE http://localhost:3000/api/jokes/1
+
+
+### Destroy Joke I have permission for 
+
+
+DELETE http://localhost:3000/localhost:3000/api/jokes/1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjU1NTk4NTIsInN1YiI6MX0.eW3qHqsNP3XdNZI0Xn11Y3-4kJfaSdFT4oyjAlzSgGE
 
 
 ## Random Joke 
@@ -56,7 +65,7 @@ Content-Type: application/json
 {
     "username": "Henry3",
     "email": "henry3@test.com",
-    "password": "password3",
+    "password": "password2",
     "password_confirmation": "password2"
 }
 
@@ -68,8 +77,19 @@ Content-Type: application/json
 
 {
     
-    "email": "henry3@test.com",
-    "password": "password3"
+    "email": "henry@test.com",
+    "password": "password1"
+   
+}
+### Sign in with correct details 
+
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+    
+    "email": "henry2@test.com",
+    "password": "password2"
    
 }
 
