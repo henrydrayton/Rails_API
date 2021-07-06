@@ -94,7 +94,9 @@ Content-Type: application/json
 }
 
 
+### Get categories 
 
+GET http://localhost:3000/api/categories 
 
 
 
